@@ -73,7 +73,7 @@ var json = {
 	},
 	"data4": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Aliens"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -95,7 +95,7 @@ var json = {
 	},
 	"data5": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Biblical"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -139,7 +139,7 @@ var json = {
 	},
 	"data7": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Zombie"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -161,7 +161,7 @@ var json = {
 	},
 	"data8": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Natural"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -183,7 +183,7 @@ var json = {
 	},
 	"data9": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Aliens"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -205,7 +205,7 @@ var json = {
 	},
 	"data10": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Biblical"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -249,7 +249,7 @@ var json = {
 	},
 	"data12": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Zombie"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -271,7 +271,7 @@ var json = {
 	},
 	"data13": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Biblical"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -315,7 +315,7 @@ var json = {
 	},
 	"data15": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Zombie"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -337,7 +337,7 @@ var json = {
 	},
 	"data16": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Natural"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -359,7 +359,7 @@ var json = {
 	},
 	"data17": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Aliens"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -381,7 +381,7 @@ var json = {
 	},
 	"data18": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Biblical"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],
@@ -425,7 +425,7 @@ var json = {
 	},
 	"data20": {
 		"fear": ["Fear Level: ", "Opps I crapped my pants"],
-		"apocalypse": ["Apocalypse: ", "Atomic"],
+		"apocalypse": ["Apocalypse: ", "Zombie"],
 		"firearm": ["Firearm: ", "yes"],
 		"ammo": ["Ammo: ", "yes"],
         "melee": ["Melee Weapon: ", "yes"],

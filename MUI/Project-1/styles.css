@@ -91,7 +91,7 @@ h3 {
 }
 
 .addItem input {
-    padding-top: 35px;
+    padding-top: 20px;
 }
 
 /*.addItem form {
@@ -102,5 +102,9 @@ div {
     color: black;
 }
 
+div.icon {
+    padding: 0px 0px 20px 0px;
+    top: 20px;
+}
 
 

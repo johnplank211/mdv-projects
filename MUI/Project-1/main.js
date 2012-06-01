@@ -3,12 +3,14 @@ MUI Project 1
 term 06/12
 Apocalypse Checklist*/
 
+//This gets the page fully loaded, and ge gets the elements from html
 window.addEventListener("DOMContentLoaded", function() {
 		var ge = function(x) {
 	    var theElement = document.getElementById(x);
 		return theElement;
 	};
 
+// Makes select cats for fear group. 
 	var makeCats = function () {
 		var formTags = document.getElementsByTagName("form"),
 			selectLi = ge("select"),
@@ -24,6 +26,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		selectLi.appendChild(makeSelect);
 	};
 
+//gets radio elements if checked
 	var getRadio = function () {
 		var radio = document.forms[0].apocalypse;
 		for (var i = 0; i < radio.length; i++) {
@@ -34,6 +37,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	};
 
+//gets chekcbox if they are checked
 	var getCheckBoxValue = function () {
 		if(ge("firearm").checked){
 			firearmValue = ge("firearm").value;
@@ -102,7 +106,8 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 
 	};
-	
+
+//toggle on and off displays 
 	var toggleControls = function (n) {
 		switch(n) {
 			case "on":
@@ -123,6 +128,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	};
 
+//function that store the data locally and assigns random number
 	var storeData = function (key) {
 		if(!key) {
 			var id    		= Math.floor(Math.random()* 1000001);
@@ -157,6 +163,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		alert("Checklist Saved!");
 	};
 
+//retrieves saved data from local storage
 	var getData = function () {
 		toggleControls("on");
 		if (localStorage.length === 0) {
@@ -191,6 +198,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	};
 
+//gets the image from folder and matches with the proper catName
 	var getImage = function (catName, makeSubList) {
 		var imageLi = document.createElement("li");
 		makeSubList.appendChild(imageLi);
@@ -199,6 +207,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		imageLi.appendChild(newImg);
 	};
 
+//Function to auto populate local storage with dummy data
 	var autoFillData = function () {
 		for ( var n in json) {
 			var id = Math.floor(Math.random()* 1000001);
@@ -206,6 +215,8 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
+
+//creates links to edit checklist
 	var makeItemLinks = function (key, linksLi) {
 		var editLink = document.createElement("a");
 	    editLink.href = "#";
@@ -227,6 +238,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		linksLi.appendChild(deleteLink);
 	};
 
+//function that allows to edit saved data
 	var editItem = function () {
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
@@ -302,6 +314,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		editSubmit.key = this.key;
 };	
 
+//clears out local storage
 	var clearLocal = function () {
 			if (localStorage.length === 0) {
 				alert("All clear.")
@@ -312,6 +325,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			}
 	};
 
+//Deletes single checklist
 	var deleteItem =function () {
 		var ask = confirm("Are you sure you want to erase this Checklist? Has a cure been found?");
 		if (ask) {
@@ -323,6 +337,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
+//check several input to make sure there in valid formate 
 	var validate = function (e) {
 		var getEmail = ge("email");
 		var getComments = ge("comments");
