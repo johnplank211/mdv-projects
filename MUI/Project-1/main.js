@@ -241,8 +241,12 @@ window.addEventListener("DOMContentLoaded", function() {
 				radio[i].setAttribute("checked", "checked");
 			} else if (radio[i].value == "Zombie" && item.apocalypse[1] == "Zombie") {
 				radio[i].setAttribute("checked", "checked");
-			}
-		}			
+			} else if (radio[i].value == "Aliens" && item.apocalypse[1] == "Aliens") {
+				radio[i].setAttribute("checked", "checked");
+			} else if (radio[i].value == "Biblical" && item.apocalypse[1] == "Biblical") {
+				radio[i].setAttribute("checked", "checked");
+		}	
+		};		
 
 		if(item.firearm[1] == "yes") {
 			ge("firearm").setAttribute("checked", "checked");

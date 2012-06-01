@@ -1,4 +1,7 @@
-//Plank John
+//John Plank
+//Term 06/12
+//MUI Project 1
+//Apocalypse Checklist
 
 
 var json = {
