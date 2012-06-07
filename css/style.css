@@ -20,7 +20,7 @@ div.addItem {
     to(#333333));*/
     /*border: solid 1px rgba(79, 79, 79, 0.75);*/
     text-align: right;
-    background-image: url("images/Header.png");
+    background-image: url("images/Header.png") no-repeat;
     height: 40px;
 }
 
@@ -90,21 +90,25 @@ h3 {
     vertical-align:center;
 }
 
-.addItem input {
+input.addItem  {
     padding-top: 20px;
+    background-image: url("images/hourGlass.png");
 }
 
-/*.addItem form {
+.addItem form {
     height: 100px;
 }
-*/
+
 div {
     color: black;
 }
 
-div.icon {
+/*div.icon*/ {
     padding: 0px 0px 20px 0px;
     top: 20px;
 }
 
-
+.img-1 {
+    padding-top: 10px;
+    padding-left: 10px;
+}

@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	};
 
-//gets chekcbox if they are checked
+//gets checkbox if they are checked
 	var getCheckBoxValue = function () {
 		if(ge("firearm").checked){
 			firearmValue = ge("firearm").value;
@@ -162,6 +162,17 @@ window.addEventListener("DOMContentLoaded", function() {
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Checklist Saved!");
 	};
+
+var getImage = function (catName, makeSubList) {
+		var imageLi = document.createElement("li");
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement("img");
+		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
+		imageLi.appendChild(newImg);
+	};
+var apocalypseValue;
+
+
 
 //retrieves saved data from local storage
 	var getData = function () {
