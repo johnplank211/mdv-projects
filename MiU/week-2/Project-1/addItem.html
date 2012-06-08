@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- John Plank
+Term 06/12
+MUI Project 1
+Apocalypse Checklist -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="A checklist for your life"/>
+		<meta name="keywords"    content="apocalypse, checklist, Full Sail, mobile development"/>
+		<meta name="robots"      content="index, follow"/>
+		<meta name="viewport"    content="user-scalable=no, width=device-width"/>
+		<title>John Plank: Apocalypse Checklist</title>
+		<link href="styles.css" rel="stylesheet" />
+	</head>
+	<body>
+		<form action="#" method="post" id="CheckListForm">
+			<fieldset>
+				<legend>What apocalypse are you currently experiencing</legend>
+					<ul>
+						<li><input type="radio" id="Natural" value="Natural" name="apocalypse"/><label for="Natural">Natural</label></li>
+						<li><input type="radio" id="Atomic" value="Atomic" name="apocalypse"/><label for="Atomic">Nuclear</label></li>
+						<li><input type="radio" id="Zombie" value="Zombie" name="apocalypse"/><label for="Zombie">Zombie</label></li>
+						<li><input type="radio" id="Aliens" value="Aliens" name="apocalypse"/><label for="Aliens">Aliens</label></li>
+						<li><input type="radio" id="Biblical" value="Biblical" name="apocalypse"/><label for="Biblical">Biblical</label></li>
+					</ul>				
+			</fieldset>
+			<fieldset>
+				<legend>Your Apocalypse Checklist</legend>
+					<ul>
+						<li>Check what you have, get what you don't</li>
+						<li><input type="checkbox" id="firearm" value="Yes" /><label for="firearm">Firearm</label></li>
+						<li><input type="checkbox" id="ammo" value="Yes" /><label for="ammo">Ammo</label></li>
+						<li><input type="checkbox" id="meleeWeapon" value="Yes" /><label for="meleeWeapon">Melee Weapon</label></li>
+						<li><input type="checkbox" id="cannedFood" value="Yes" /><label for="cannedFood">Canned Food</label></li>
+						<li><input type="checkbox" id="water" value="Yes" /><label for="water">Water</label></li>
+						<li><input type="checkbox" id="chainMeshSuit" value="Yes" /><label for="chainMeshSuit">Chain Mesh Suit <small>:$23,000</small></label></li>
+						<li><input type="checkbox" id="topographicalMap" value="Yes" /><label for="topographicalMap">Topographical map</label></li>
+						<li><input type="checkbox" id="leatherman" value="Yes" /><label for="leatherman">Leatherman</label></li>
+						<li><input type="checkbox" id="rucksack" value="Yes" /><label for="rucksack">Rucksack</label></li>
+						<li><input type="checkbox" id="boots" value="Yes" /><label for="boots">Boots</label></li>
+						<li><input type="checkbox" id="matches" value="Yes" /><label for="matches">Matches</label></li>
+						<li><input type="checkbox" id="p38" value="Yes" /><label for="p38">P38</label></li>
+						<li><input type="checkbox" id="intestinalFortitude" value="Yes" /><label for="intestinalFortitude">Intestinal Fortitude</label></li>
+					</ul>
+			</fieldset>
+		<h2>Add additional items for comfort only. </h2><small> Remember if you plan to travel on foot weight is not yor friend.</small>
+			<fieldset>
+					<legend>Additonal items</legend>
+					<ul>
+						<li><label for="item">Item</label><input type="text" id="item" /></li>			
+					</ul>
+			</fieldset>
+			<fieldset>
+				<span>* fields are required.</span>
+				<ul id="error"></ul>
+				<legend>Last questions</legend>
+				<ul>
+					<li id="select">How scared are you?<br /></li>
+					<li><label for="readiness">Readiness</label><input type="range" min="0" max="11" id="readiness" /></li>						
+					<li>Your personal info</li>
+					<li><label for="date" >*The world ended:</label><input type="date" id="date" /></li>
+					 <li><label for="email">*Your loved one email address is</label><input type="email" id="email" placeholder="example@email.com"/></li>
+					<li><label for="comments">*Death letter here:</label><textarea id="comments"></textarea></li>
+				</ul>
+				<h3>If someone finds this, please send accordingly.</h3>
+			</fieldset>
+		</form>
+	    <nav>
+	    	<a href="#" id="clear">Clear Stored Data</a>
+	    	<a href="#" id="displayLink">Display data</a>
+	    	<a href="addItem.html" id="addNew" style="display:none;">Add More Life</a>
+	    </nav>
+	    <input type="submit" value="Save Life" id="submit"/>
+		<script type="text/javascript" src="json.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
+
+
+
+
+				
