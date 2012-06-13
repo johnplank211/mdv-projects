@@ -43,10 +43,10 @@ h4 { /*top: 25px;
     /*background-image: url("images/Zombie.png");*/
 }
 
-fieldset {
+/*fieldset {
 	background: #b5b59f;
     color: black;
-}
+}*/
 
 html {
 	background: #cccca3;
@@ -77,13 +77,13 @@ h3 {
  	font-weight: bold;
  }
 
- legend {
+ /*legend {
  	font-style: italic;
  	border: 1px solid black;
  	background: #99998c;
  	color: white;
  	font-weight: bolder;
- }
+ }*/
 
  h1 {
     /*background-image: url("images/head.png");*/
@@ -112,3 +112,17 @@ div {
     padding-top: 10px;
     padding-left: 10px;
 }
+
+label.error {
+    display: block;
+    color: red;
+    margin: 10px 0px;
+}
+
+#errorLink {
+    display: none;
+}
+
+
+
+
