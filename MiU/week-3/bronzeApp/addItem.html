@@ -20,7 +20,7 @@ Apocalypse Checklist -->
 					<ul>
 						<li><input type="radio" id="Natural" value="Natural" name="apocalypse"/><label for="Natural">Natural</label></li>
 						<li><input type="radio" id="Atomic" value="Atomic" name="apocalypse"/><label for="Atomic">Nuclear</label></li>
-						<li><input type="radio" id="Zombie" value="Zombie" name="apocalypse"/><label for="Zombie">Zombie</label></li>
+						<li><input type="radio" id="Zombie" value="Zombie" checked value ="Zombie"name="apocalypse"/><label for="Zombie">Zombie</label></li>
 						<li><input type="radio" id="Aliens" value="Aliens" name="apocalypse"/><label for="Aliens">Aliens</label></li>
 						<li><input type="radio" id="Biblical" value="Biblical" name="apocalypse"/><label for="Biblical">Biblical</label></li>
 					</ul>				
@@ -29,8 +29,8 @@ Apocalypse Checklist -->
 				<legend>Your Apocalypse Checklist</legend>
 					<ul>
 						<li>Check what you have, get what you don't</li>
-						<li><input type="checkbox" id="firearm" value="Yes" /><label for="firearm">Firearm</label></li>
-						<li><input type="checkbox" id="ammo" value="Yes" /><label for="ammo">Ammo</label></li>
+						<li><input type="checkbox" id="firearm" value="Yes" checked value="firearm" /><label for="firearm">Firearm</label></li>
+						<li><input type="checkbox" id="ammo" value="Yes" checked value="Ammo" /><label for="ammo">Ammo</label></li>
 						<li><input type="checkbox" id="meleeWeapon" value="Yes" /><label for="meleeWeapon">Melee Weapon</label></li>
 						<li><input type="checkbox" id="cannedFood" value="Yes" /><label for="cannedFood">Canned Food</label></li>
 						<li><input type="checkbox" id="water" value="Yes" /><label for="water">Water</label></li>
@@ -41,7 +41,7 @@ Apocalypse Checklist -->
 						<li><input type="checkbox" id="boots" value="Yes" /><label for="boots">Boots</label></li>
 						<li><input type="checkbox" id="matches" value="Yes" /><label for="matches">Matches</label></li>
 						<li><input type="checkbox" id="p38" value="Yes" /><label for="p38">P38</label></li>
-						<li><input type="checkbox" id="intestinalFortitude" value="Yes" /><label for="intestinalFortitude">Intestinal Fortitude</label></li>
+						<li><input type="checkbox" id="intestinalFortitude" value="Yes" checked value="intestinalFortitude" /><label for="intestinalFortitude">Intestinal Fortitude</label></li>
 					</ul>
 			</fieldset>
 		<h2>Add additional items for comfort only. </h2><small> Remember if you plan to travel on foot weight is not yor friend.</small>
@@ -59,7 +59,7 @@ Apocalypse Checklist -->
 					<li id="select">How scared are you?<br /></li>
 					<li><label for="readiness">Readiness</label><input type="range" min="0" max="11" id="readiness" /></li>						
 					<li>Your personal info</li>
-					<li><label for="date" >*The world ended:</label><input type="date" id="date" /></li>
+					<li><label for="date" >*The world ended:</label><input type="date" id="date" default value="2012-12-21" /></li>
 					 <li><label for="email">*Your loved one email address is</label><input type="email" id="email" placeholder="example@email.com"/></li>
 					<li><label for="comments">*Death letter here:</label><textarea id="comments"></textarea></li>
 				</ul>
@@ -72,8 +72,8 @@ Apocalypse Checklist -->
 	    	<a href="addItem.html" id="addNew" style="display:none;">Add More Life</a>
 	    </nav>
 	    <input type="submit" value="Save Life" id="submit"/>
-		<script type="text/javascript" src="json.js"></script>
-		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="js/json.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
 

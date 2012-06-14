@@ -1,0 +1,223 @@
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description" content="A checklist for your life"/>
+		<meta name="Keywords"    content="apocalypse, checklist, full sail, mobile development"/>
+		<meta name="robots"      content="index, follow"/>
+		<meta name="viewport"    content="user-scalable=no, width=device-width"/> 
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="cleartype" content="on">
+		
+		<title>John Plank: Apocalypse Checklist</title>
+		
+		
+		<link href="css/style.css" rel="stylesheet"/> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+		<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" /> 
+
+
+		<link rel="stylesheet" href="css/style.css" />
+		
+		<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	
+	</head>
+
+	<body>
+
+
+
+
+
+
+
+
+
+
+<div data-role="page" id="addItem" data-add-back-btn="true">
+		
+		<div data-role="header" data-role="fixed">
+			<h1>Apocalyspe Checklist</h1> 
+		</div>
+
+		<div data-role="content">
+
+			<form action="#" method="post" id="checklistForm">
+
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>*Apocalypse</legend>
+							<br><small>* Must be filled out</small>
+						<input type="radio" value="Zombie" checked value="Zombie"name="apocalypse" id="apocalypse-1" class="required"/>
+						<label for="apocalypse-1" >Zombie</label>
+
+						<input type="radio" value="Natural" name="apocalypse" id="apocalypse-2" />
+						<label for="apocalypse-2" >Natural</label>
+
+						<input type="radio" value="Nuclear" name="apocalypse" id="apocalypse-3" />
+						<label for="apocalypse-3" >Nuclear</label>
+
+						<input type="radio" value="Biblical" name="apocalypse" id="apocalypse-4" />
+						<label for="apocalypse-4" >Biblical</label>
+
+						<input type="radio" value="Alien" name="apocalypse" id="apocalypse-5" />
+						<label for="apocalypse-5" >Alien</label>
+					
+					</fieldset>
+
+				</div>
+
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Checklist Items</legend>
+						<input type="checkbox" value="Firearm" checked value="Firearm" name="firearm" id="firearm" />
+						<label for="firearm" >Firearm</label>
+
+						<input type="checkbox" value="Ammo" checked value="Ammo" name="items" id="item-2" />
+						<label for="item-2" >Ammo</label>
+
+						<input type="checkbox" value="Melee Weapon" name="item" id="item-3" />
+						<label for="item-3" >Melee Weapon</label>
+
+						<input type="checkbox" value="P38" name="items" id="item-4" />
+						<label for="item-4" >P38</label>
+
+						<input type="checkbox" value="Intestinal Fortitude" checked value="Intestinal Fortitude" name="item" id="item-5" />
+						<label for="item-5" >Intestinal Fortitude</label>
+
+						<input type="checkbox" value="P38" name="items" id="item-6" />
+						<label for="item-6" >Canned Food</label>
+
+						<input type="checkbox" value="P38" name="items" id="item-7" />
+						<label for="item-7" >Leatherman</label>
+
+						<input type="checkbox" value="Topographical Map" name="item" id="item-8" />
+						<label for="item-8" >Topographical Map</label>
+
+						<input type="checkbox" value="Rucksack" name="items" id="item-9" />
+						<label for="item-9" >Rucksack</label>
+
+						<input type="checkbox" value="Water" name="items" id="item-10" />
+						<label for="item-10" >Water</label>
+
+						<input type="checkbox" value="Chain Mesh Suite" name="items" id="item-11" />
+						<label for="item-11" >Chain mesh suite</label>
+
+						<input type="checkbox" value="Boots" name="items" id="item-12" />
+						<label for="item-12" >Boots</label>
+
+						<input type="checkbox" value="Matches" name="items" id="item-13" />
+						<label for="item-13" >Matches</label>
+					
+					</fieldset>
+
+				</div>
+
+				<div>
+					<label for="mydate">*Date The World Ended</label>
+
+					<input name="mydate" id="mydate" type="date" data-role="datebox"
+					   data-options='{"mode": "calbox"}' default value="12/21/2012" class="required date" >
+				</div>
+		
+
+				<div data-role="fieldcontain">
+					<label for="readiness">Readiness:</label>
+					<input type="range" name="readiness" id="readiness" value="3" min="0" max="11"/>
+				</div>
+
+				
+				<div data-role="fieldcontain">
+					<label for="email">*Email Address:</label>
+					<input type="text" name="email" id="email" placeholder="notGonnamake@dead.com" class="required email" />
+				</div>
+
+				<div data-role="fieldcontain" >
+					<label for="comments">*Death Letter:</label>
+					<textarea placeholder="I tried my best but my best sucked!" class="required" ></textarea>
+				</div>
+
+				<div data-role="fieldcontain" >
+					<label for="fearGroups">Fear Level</label>
+					<select name="fearGroups" id="select" data-native-menu="false" >
+						<option data-placeholder=" true" >Please Choose Your Fear Level</option>
+						<option value="denial" >This can't be happening</option>
+						<option value="scared" >Oops I crapped my pants</option>
+						<option value="courage" >Psalms 144:1</option>
+					</select>
+				</div>
+
+				<div data-role="fieldcontain">
+			    	<ul>
+				    	<li><a href="#" id="clear">Clear Stored Data</a></li>
+				    	<li><a href="#" id="displayLink">Display data</a></li>
+				    	<!-- <li><a href="addItem2.html" id="addNew" style="display:none;">Add More Life</a></li> -->
+			   		</ul>
+			   </div> 
+
+				<div data-role="footer" data-position="fixed" data-id="x" >
+				<div data-role="navbar" >
+					<ul>
+						<li><a href="index.html" data-icon="star" >Home</a></li>
+						<li><a href="index#storage.html" data-icon="star">Storage</a></li>
+						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-2/bronzeApp/index.html" data-icon="star">git</a></li>
+					</ul>
+				</div>
+			</div> 
+
+<!-- style="display:none;" -->
+				<div>
+					<input type="submit" value="Save my life" id="submit" data-theme="b" data-inline="true"/>
+					<input type="reset" value="Reset" data-theme="a" data-inline="true"/>
+
+				</div>
+			
+		</form>
+
+			<a href="#error" id="errorLink" data-rel="dialog" >Show Errors</a>
+		
+		
+	
+		</div> <!-- Content end -->
+
+	</div> <!-- Page end -->
+
+	<div data-role="dialog" id="error" data-transition="pop" >
+		
+		<div data-role="header" data-role="fixed">
+			<h1>Missing Fields</h1> 
+		</div>
+
+		<div data-role="content">
+
+			<ul>
+				<li></li>
+			</ul> 
+
+		</div>  <!-- content end -->
+	</div>  <!-- error end -->
+
+	</form>
+			
+
+		
+		
+		
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+		<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
+		
+		<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+		<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+		<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+		
+		<script type="text/javascript" src="js/json.js"></script>
+		<script type="text/javascript" src="js/main2.js"></script>
+		
+	</body>
+</html>

@@ -34,7 +34,7 @@ Apocalypse Checklist -->
 		</div>
 
 		<div data-role="content" >
-			<a href="#addItem" data-ajax"false">
+			<a href="addItem2.html" data-ajax"false">
 			<img src="images/Header.png" >
 			</a> 
 
@@ -359,7 +359,7 @@ Apocalypse Checklist -->
 		</div>
 			
 		</div>
-	</div> -->
+	</div>
 	<div data-role="page" id="storage" data-add-back-btn="true">
 		<div data-role="header" data-role="fixed">
 			<h1>Checklist Storage</h1> 
@@ -378,169 +378,16 @@ Apocalypse Checklist -->
 			</div>
 	</div>				
 
-	<div data-role="page" id="addItem" data-add-back-btn="true">
-		
-		<div data-role="header" data-role="fixed">
-			<h1>Apocalyspe Checklist</h1> 
-		</div>
-
-		<div data-role="content">
-
-			<form action="" method="post" id="checklistForm">
-
-				<div data-role="fieldcontain">
-					<fieldset data-role="controlgroup">
-						<legend>Apocalypse</legend>
-						
-						<input type="radio" value="Zombie" name="apocalypse" id="apocalypse-1" class="required"/>
-						<label for="apocalypse-1" >Zombie</label>
-
-						<input type="radio" value="Natural" name="apocalypse" id="apocalypse-2" class="required"/>
-						<label for="apocalypse-2" >Natural</label>
-
-						<input type="radio" value="Nuclear" name="apocalypse" id="apocalypse-3" class="required"/>
-						<label for="apocalypse-3" >Nuclear</label>
-
-						<input type="radio" value="Biblical" name="apocalypse" id="apocalypse-4" class="required"/>
-						<label for="apocalypse-4" >Biblical</label>
-
-						<input type="radio" value="Alien" name="apocalypse" id="apocalypse-5" class="required"/>
-						<label for="apocalypse-5" >Alien</label>
-					
-					</fieldset>
-
-				</div>
-
-				<div data-role="fieldcontain">
-					<fieldset data-role="controlgroup">
-						<legend>Checklist Items</legend>
-						<input type="checkbox" value="Firearm" name="item" id="item-1" />
-						<label for="item-1" >Firearm</label>
-
-						<input type="checkbox" value="Ammo" name="item" id="item-2" />
-						<label for="item-2" >Ammo</label>
-
-						<input type="checkbox" value="MeleeWeapon" name="item" id="item-3" />
-						<label for="item-3" >Melee Weapon</label>
-
-						<input type="checkbox" value="P38" name="item" id="item-4" />
-						<label for="item-4" >P38</label>
-
-						<input type="checkbox" value="IntestinalFortitude" name="item" id="item-5" />
-						<label for="item-5" >Intestinal Fortitude</label>
-
-						<input type="checkbox" value="P38" name="item" id="item-6" />
-						<label for="item-6" >Canned Food</label>
-
-						<input type="checkbox" value="P38" name="item" id="item-7" />
-						<label for="item-7" >Leatherman</label>
-
-						<input type="checkbox" value="TopographicalMap" name="item" id="item-8" />
-						<label for="item-8" >Topographical Map</label>
-
-						<input type="checkbox" value="Rucksack" name="item" id="item-9" />
-						<label for="item-9" >Rucksack</label>
-
-						<input type="checkbox" value="Water" name="item" id="item-10" />
-						<label for="item-10" >Water</label>
-
-						<input type="checkbox" value="ChainMeshSuite" name="item" id="item-11" />
-						<label for="item-11" >Chain mesh suite</label>
-
-						<input type="checkbox" value="Boots" name="item" id="item-12" />
-						<label for="item-12" >Boots</label>
-
-						<input type="checkbox" value="Matches" name="item" id="item-13" />
-						<label for="item-13" >Matches</label>
-					
-					</fieldset>
-
-				</div>
-
-
-
-				
-
-				<!-- <div data-role="fieldcontain">
-					<label for="checklItems">items:</label>
-					<input type="text" name="checklItems" id="checklItems" class="required"/>
-				</div> -->
-
-				
-
-				<div data-role="fieldcontain">
-					<label for="readiness">Readiness:</label>
-					<input type="range" name="readinessLevel" id="readinessLevel" value="1" min="1" max="11"/>
-				</div>
-
-				<!-- <div data-role="fieldcontain">
-					<label for="checklProblems">Are you ready:</label>
-					<select data-role="slider" >
-						<option value="off" >No Go</option>
-						<option value="on" >go</option>
-					</select>
-				</div> -->
-				<div data-role="fieldcontain">
-					<label for="email">Email Address:</label>
-					<input type="text" name="email" id="email" class="required email" />
-				</div>
-
-				<div data-role="fieldcontain" >
-					<label for="checklProblems">Death Letter:</label>
-					<textarea class="required" data-role="controlgroup"></textarea>
-				</div>
-
-				<div data-role="fieldcontain" >
-					<label for="fear Level">Fear Level</label>
-					<select name="fear" id="fear" data-native-menu="false" >
-						<option data-placeholder=" true" >Please Choose Your Fear Level</option>
-						<option value="denial" >This can't be happening</option>
-						<option value="scared" >Oops I crapped my pants</option>
-						<option value="courage" >Psalms 144:1</option>
-					</select>
-				</div>
-
-				<div>
-					<input type="submit" value="Save my life" data-theme="b" data-inline="true"/>
-					<input type="reset" value="Reset" data-theme="a" data-inline="true"/>
-				</div>
-			
-			<!-- </form> -->
-
-			<a href="#error" id="errorLink" data-rel="dialog" >Show Errors</a>
-		
-			</form>
 	
-		</div> <!-- Content end -->
 
-	</div> <!-- Page end -->
-
-	<div data-role="dialog" id="error" data-transition="pop" >
 		
-		<div data-role="header" data-role="fixed">
-			<h1>Missing Fields</h1> 
-		</div>
-
-		<div data-role="content">
-
-			<ul>
-				<li></li>
-			</ul>
-
-		</div> <!-- content end -->
-	</div> <!-- error end -->
-
-		<nav>
-	    	<a href="#" id="clear">Clear Stored Data</a>
-	    	<a href="#" id="displayLink">Display data</a>
-	    	<a href="addItem.html" id="addNew" style="display:none;">Add More Life</a>
-	    </nav>
+	    	
+	    
 
 		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="js/json.js"></script>
-		<script type="text/javascript" src="js/main2.js"></script>
+		
 		
 	</body>
 </html>

@@ -4,27 +4,80 @@ term 06/12
 Apocalypse Checklist*/
 
 //This gets the page fully loaded, and ge gets the elements from html
-window.addEventListener("DOMContentLoaded", function() {
+/*window.addEventListener("DOMContentLoaded", function() {
 		var ge = function(x) {
 	    var theElement = document.getElementById(x);
 		return theElement;
-	};
+	};*/
+
+/*var parseClform = function (data) {
+	console.log(data);
+}*/
+
+/*$(document).ready(function(){*/
+
+
+
+	/*var clf = $("#checklistForm"),
+	    errorLink = $("#errorLink")
+	
+	clf.validate({
+		invalidHandler: function(form, validator) {
+			errorLink.click();
+			var html = "";
+			for (var key in validator.submitted) {
+				var label = $("label[for^='"+ key +"']").not("[generated]");
+				var legend = label.closest("fieldset").find(".ui-controlgroup-label")
+				var fieldName = legend.length ? legend.text() : label.text();
+				html += "<li>" + fieldName + "</li>";
+			};
+			$("#error ul").html(html);
+		},
+		submitHandler: function() {
+			var data = clf.serializeArray();
+			parseClform(data);
+		}
+	});
+
+var ge = $;*/
 
 // Makes select cats for fear group. 
-	var makeCats = function () {
-		var formTags = document.getElementsByTagName("form"),
-			selectLi = ge("select"),
-			makeSelect = document.createElement("select");
-		makeSelect.setAttribute("id", "groups");
-		for (var i = 0, j = fearGroups.length; i<j; i++) {
-			var makeOption = document.createElement('option');
-			var optText = fearGroups[i];
-			makeOption.setAttribute('value', fearGroups[i]);
-			makeOption.innerHTML = optText;
-			makeSelect.appendChild(makeOption);
-	}
-		selectLi.appendChild(makeSelect);
-	};
+	// var makeCats = function () {
+	// 	var formTags = document.getElementsByTagName("form"),
+	// 		selectLi = ge("select"),
+	// 		makeSelect = document.createElement("select");
+	// 	makeSelect.setAttribute("id", "groups");
+	// 	for (var i = 0, j = fearGroups.length; i<j; i++) {
+	// 		var makeOption = document.createElement('option');
+	// 		var optText = fearGroups[i];
+	// 		makeOption.setAttribute('value', fearGroups[i]);
+	// 		makeOption.innerHTML = optText;
+	// 		makeSelect.appendChild(makeOption);
+	// }
+	// 	selectLi.appendChild(makeSelect);
+	// };
+
+$(document).bind('pageinit', function(){
+   
+   var cform = $('#checklistForm');
+       
+       cform.validate({
+       		invalidHandler: function(form, validator) {},
+
+       		submitHandler: function() {
+			var data = cform.serializeArray();
+			storeData(data);
+			getData(data);
+		}
+
+       });
+
+});
+ 
+ ge = $;
+
+
+
 
 //gets radio elements if checked
 	var getRadio = function () {
@@ -111,13 +164,13 @@ window.addEventListener("DOMContentLoaded", function() {
 	var toggleControls = function (n) {
 		switch(n) {
 			case "on":
-				ge("CheckListForm").style.display = "none";
+				ge("checklistForm").style.display = "none";
 				ge("clear").style.display = "inline";
 				ge("displayLink").style.display = "none";
 				ge("addNew").style.display = "inline";
 				break;
 		   case "off":		
-		   		ge("CheckListForm").style.display = "block";
+		   		ge("checklistForm").style.display = "block";
 				ge("clear").style.display = "inline";
 				ge("displayLink").style.display = "inline";
 				ge("addNew").style.display = "none";
@@ -349,55 +402,55 @@ var apocalypseValue;
 	}
 
 //check several input to make sure there in valid formate 
-	var validate = function (e) {
-		var getEmail = ge("email");
-		var getComments = ge("comments");
-		var getDate = ge("date");
+	// var validate = function (e) {
+	// 	var getEmail = ge("email");
+	// 	var getComments = ge("comments");
+	// 	var getDate = ge("date");
 
-		errMsg.innerHTML = ""; 
-		getComments.style.border = "1px solid black";
-		getDate.style.border = "1px solid black";
-		getEmail.style.border = "1px solid black";
+	// 	errMsg.innerHTML = ""; 
+	// 	getComments.style.border = "1px solid black";
+	// 	getDate.style.border = "1px solid black";
+	// 	getEmail.style.border = "1px solid black";
 
-		var messagesArray = [];
+	// 	var messagesArray = [];
 
-		if (getComments.value == "" ) {
-			var commentsError = "Please write a death letter.";
-			getComments.style.border = "2px solid red";
-			messagesArray.push(commentsError);
-		}
+	// 	if (getComments.value == "" ) {
+	// 		var commentsError = "Please write a death letter.";
+	// 		getComments.style.border = "2px solid red";
+	// 		messagesArray.push(commentsError);
+	// 	}
 
-		if (getDate.value == "" ) {
-			var dateError = "Please mark when the world ended.";
-			getDate.style.border = "2px solid red";
-			messagesArray.push(dateError);
-		}		
+	// 	if (getDate.value == "" ) {
+	// 		var dateError = "Please mark when the world ended.";
+	// 		getDate.style.border = "2px solid red";
+	// 		messagesArray.push(dateError);
+	// 	}		
 
-		var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-		if(!(re.exec(getEmail.value))) {
-			var emailError = "Please use a valid emaill address.";
-			getEmail.style.border = "2px solid red";
-			messagesArray.push(emailError);
-		}
+	// 	var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	// 	if(!(re.exec(getEmail.value))) {
+	// 		var emailError = "Please use a valid emaill address.";
+	// 		getEmail.style.border = "2px solid red";
+	// 		messagesArray.push(emailError);
+	// 	}
 
-		if(messagesArray.length >= 1) {
-			for (var i = 0, j = messagesArray.length; i < j; i++) {
-				var txt = document.createElement("li");
-				txt.innerHTML = messagesArray[i];
-				errMsg.appendChild(txt);
-			}
-			e.preventDefault();
-			return false;
-		} else { 
-			storeData(this.key);
-		}
+	// 	if(messagesArray.length >= 1) {
+	// 		for (var i = 0, j = messagesArray.length; i < j; i++) {
+	// 			var txt = document.createElement("li");
+	// 			txt.innerHTML = messagesArray[i];
+	// 			errMsg.appendChild(txt);
+	// 		}
+	// 		e.preventDefault();
+	// 		return false;
+	// 	} else { 
+	// 		storeData(this.key);
+	// 	}
 	
-	 };
+	//  };
 	
 	var apocalypseValue;
 	var errMsg = ge("error"); 
 	var fearGroups = ["--Fear level--", "Are you kidding me?", "Opps I crapped my pants", "Psalm 144:1"];
-	makeCats();
+	// makeCats();
 	var firearmValue;
 
 	var displayLink = ge("displayLink");
@@ -406,7 +459,7 @@ var apocalypseValue;
 		clearLink.addEventListener("click", clearLocal);
 		var save = ge("submit");
 		save.addEventListener("click", validate);
-});
+/*})});*/
 
 
 

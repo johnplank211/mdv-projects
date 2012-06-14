@@ -1,58 +1,116 @@
 
 
-var parseClform = function (data) {
-	console.log(data);
-}
-
-$(document).ready(function(){
 
 
 
-	var clf = $("#checklistForm"),
-	    errorLink = $("#errorLink")
-	
-	clf.validate({
-		invalidHandler: function(form, validator) {
-			errorLink.click();
-			var html = "";
-			for (var key in validator.submitted) {
-				var label = $("label[for^='"+ key +"']").not("[generated]");
-				var legend = label.closest("fieldset").find(".ui-controlgroup-label")
-				var fieldName = legend.length ? legend.text() : label.text();
-				html += "<li>" + fieldName + "</li>";
-			};
-			$("#error ul").html(html);
-		},
-		submitHandler: function() {
-			var data = clf.serializeArray();
-			parseClform(data);
+$(document).bind('pageinit', function(){
+   
+   var cform = $('#checklistForm');
+       
+       cform.validate({
+       		invalidHandler: function(form, validator) {},
+
+       		submitHandler: function() {
+			var data = cform.serialize();
+			storeData(data);
+			//getData(data);
 		}
-	});
 
-
-
+       });
 
 });
 
-var toggleControls = function (n) {
-		switch(n) {
-			case "on":
-				ge("CheckListForm").style.display = "none";
-				ge("clear").style.display = "inline";
-				ge("displayLink").style.display = "none";
-				ge("addNew").style.display = "inline";
-				break;
-		   case "off":		
-		   		ge("CheckListForm").style.display = "block";
-				ge("clear").style.display = "inline";
-				ge("displayLink").style.display = "inline";
-				ge("addNew").style.display = "none";
-				ge("items").style.display = "none";
-		   		break;
-		   	  default:
-		   	  	return false;
+
+
+
+var ge = $;
+
+
+var toggleControls;
+//gets radio elements if checked
+	var getRadio = function () {
+		var radio = document.forms[0].apocalypse;
+		for (var i = 0; i < radio.length; i++) {
+			if (radio[i].checked) {
+				apocalypseValue = radio[i].value;
+			}
+
 		}
 	};
+
+//gets checkbox if they are checked
+	var getCheckBoxValue = function () {
+		if(ge("firearm").checked){
+			firearmValue = ge("firearm").value;
+		}else{
+			firearmValue = "No"
+		}
+		if(ge("ammo").checked){
+			ammoValue = ge("ammo").value;
+		}else{
+			ammoValue = "No"
+		}
+		if(ge("meleeWeapon").checked){
+			meleeWeaponValue = ge("meleeWeapon").value;
+		}else{
+			meleeWeaponValue = "No"
+		}
+		if(ge("cannedFood").checked){
+			cannedValue = ge("cannedFood").value;
+		}else{
+			cannedValue = "No"
+		}
+		if(ge("water").checked){
+			waterValue = ge("water").value;
+		}else{
+			waterValue = "No"
+		}
+		if(ge("chainMeshSuit").checked){
+			chainMeshSuitValue = ge("chainMeshSuit").value;
+ 		}else{
+			chainMeshSuitValue = "No"
+		}
+		if(ge("topographicalMap").checked){
+			topographicalMapValue = ge("topographicalMap").value;
+		}else{
+			topographicalMapValue = "No"
+		}
+		if(ge("leatherman").checked){
+			leathermanValue = ge("leatherman").value;
+		}else{
+			leathermanValue = "No"
+		}
+		if(ge("rucksack").checked){
+			rucksackValue = ge("rucksack").value;
+		}else{
+			rucksackValue = "No"
+		}
+		if(ge("boots").checked){
+			bootsValue = ge("boots").value;
+		}else{
+			bootsValue = "No"
+		}
+		if(ge("matches").checked){
+			matchesValue = ge("matches").value;
+		}else{
+			matchesValue = "No"
+		}
+		if(ge("p38").checked){
+			p38Value = ge("p38").value;
+		}else{
+			p38Value = "No"
+		}
+		if(ge("intestinalFortitude").checked){
+			intestinalFortitudeValue = ge("intestinalFortitude").value;
+		}else{
+			intestinalFortitudeValue = "No"
+		}
+
+	};
+
+
+
+
 
 var storeData = function (key) {
 		if(!key) {
@@ -90,7 +148,7 @@ var storeData = function (key) {
 
 
 	var getData = function () {
-		toggleControls("on");
+		//toggleControls("on");
 		if (localStorage.length === 0) {
 			alert("There is no data in Local Storage so data was added. ");
 			autoFillData();
@@ -124,11 +182,28 @@ var storeData = function (key) {
 	};
 
 
+var getImage = function (catName, makeSubList) {
+		var imageLi = document.createElement("li");
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement("img");
+		var setSrc = newImg.setAttribute("src", "images/" + catName + ".png");
+		imageLi.appendChild(newImg);
+	};
+
+
+
+var autoFillData = function () {
+		for ( var n in json) {
+			var id = Math.floor(Math.random()* 1000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+		}
+	}
+
 var editItem = function () {
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
 
-		toggleControls("off");
+		//toggleControls("off");
 
 		var radio = document.forms[0].apocalypse;
 		for (var i = 0; i<radio.length; i++) {
@@ -209,11 +284,59 @@ var clearLocal = function () {
 			}
 	};
 
-var displayLink = ge("displayLink");
+var deleteItem =function () {
+		var ask = confirm("Are you sure you want to erase this Checklist? Has a cure been found?");
+		if (ask) {
+			localStorage.removeItem(this.key);
+			alert("Thank God for the cure, your checklist has been deleted!!");
+			window.location.reload();
+		} else {
+			alert("Checklist not erased");
+		}
+	}
+
+
+
+var makeItemLinks = function (key, linksLi) {
+		var editLink = document.createElement("a");
+	    editLink.href = "#";
+		editLink.key = key;
+		var editText = "Edit Checklist";
+		editLink.addEventListener("click", editItem);
+		editLink.innerHTML = editText;
+		linksLi.appendChild(editLink);
+
+		var breakTag = document.createElement("br");
+		linksLi.appendChild(breakTag);
+
+		var deleteLink = document.createElement("a");
+		deleteLink.href = "#";
+		deleteLink.key = key;
+		var deleteText = "Delete Checklist";
+		deleteLink.addEventListener("click", deleteItem);
+		deleteLink.innerHTML = deleteText;
+		linksLi.appendChild(deleteLink);
+	};
+
+
+
+
+/*var apocalypseValue;
+	var errMsg = ge("error"); 
+	var fearGroups = ["--Fear level--", "Are you kidding me?", "Opps I crapped my pants", "Psalm 144:1"];
+	makeCats();
+	var firearmValue;*/
+/*var validate;*/
+
+        var displayLink = ge("displayLink");
 		displayLink.addEventListener("click", getData);
 	 	var clearLink = ge("clear");
 		clearLink.addEventListener("click", clearLocal);
 		var save = ge("submit");
 		save.addEventListener("click", validate);
+
+
+
+
 
 
