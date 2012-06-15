@@ -1,4 +1,7 @@
-
+/*John Plank
+Term 06/12
+MUI Project 3
+Apocalypse Checklist*/
 
 
 
@@ -318,15 +321,6 @@ var makeItemLinks = function (key, linksLi) {
 		linksLi.appendChild(deleteLink);
 	};
 
-
-
-
-/*var apocalypseValue;
-	var errMsg = ge("error"); 
-	var fearGroups = ["--Fear level--", "Are you kidding me?", "Opps I crapped my pants", "Psalm 144:1"];
-	makeCats();
-	var firearmValue;*/
-/*var validate;*/
 
         var displayLink = ge("displayLink");
 		displayLink.addEventListener("click", getData);
