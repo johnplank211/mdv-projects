@@ -1,8 +1,23 @@
 /*John Plank
 Term 06/12
-MUI Project 3
+MUI Project 4
 Apocalypse Checklist*/
 
+
+
+/*var populate = function (data) {
+	for (var i in data) {
+		var item = data[i];
+		var key = item.id;
+
+		//var value = [item.id, item.name, item.cat ].join(";");
+
+		storage.setItem(key, value);
+	}
+}*/
+/*var checklist = function (data){
+
+};*/
 
 
 
@@ -14,16 +29,23 @@ $(document).bind('pageinit', function(){
        		invalidHandler: function(form, validator) {},
 
        		submitHandler: function() {
-			var data = cform.serialize();
+			var data = cform.serializeArray();
+			localStorage.setItem("formdata", data);
 			storeData(data);
 			//getData(data);
+		console.log(data);
 		}
 
        });
 
 });
 
-
+/*window.addEventListener("DOMContentLoaded", function() {
+		var ge = function(x) {
+	    var theElement = document.getElementById(x);
+		return theElement;
+	};*/
+$('#myPopupDiv').popup();
 
 
 var ge = $;
@@ -139,7 +161,7 @@ var storeData = function (key) {
 			item.matches	= ["Matches:", matchesValue];
 			item.p38		= ["P38:", p38Value];
 			item.intestinal = ["Intestinal Fortitude:", intestinalFortitudeValue];
-			item.item		= ["Item:", ge("item").value];			
+			//item.item		= ["Item:", ge("item").value];			
 			item.date       = ["World Ended:", ge("date").value];
 			item.email		= ["Email:", ge("email").value];
 			item.comments	= ["Comments:", ge("comments").value];
@@ -147,6 +169,7 @@ var storeData = function (key) {
 
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Checklist Saved!");
+	console.log(item);
 	};
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- John Plank
 Term 06/12
-MUI Project 3
+MUI Project 4
 Apocalypse Checklist -->
 <html lang="en">
 
@@ -28,19 +28,20 @@ Apocalypse Checklist -->
 	</head>
 	
 	<body>
-		<div data-role="page" id="home">
-		<div data-role="header" data-postion="fixed">
-			<h1>Apocalypses</h1>
+		<div data-role="page" id="home" >
+		<div data-role="header" data-postion="fixed" >
+			<!-- <h1>Apocalypses</h1> -->
 		</div>
 
 		<div data-role="content" >
 			<a href="addItem2.html" data-ajax"false">
 			<img src="images/Header.png" >
 			</a> 
+ 
 
-		
-   			<ul data-role="listview" data-mini="true" data-filter="true"  >
-	            <li><h3>Your Apocalypose Checklists</h3>
+   			<ul data-role="listview"  data-filter="true" >
+	            <!-- <li><h3>Your Apocalypose Checklists</h3> -->
+	            <legend>What are the diefferent types of apocalypses?</legend>
 	            <li><a href="#zombie"><img class="img-1" src="images/zombie.png" alt="Zombie" class="ui-li-icon">Zombie<span class="ui-li-count"></span></a></li>
 	            <li><a href="#natural"><img class="img-1" src="images/natural.png" alt="Natural" class="ui-li-icon">Natural <span class="ui-li-count"></span></a></li>
 	            <li><a href="#biblical"><img class="img-1" src="images/biblical.png" alt="biblical" class="ui-li-icon">Biblical <span class="ui-li-count"></span></a></li>
@@ -51,14 +52,43 @@ Apocalypse Checklist -->
 	   	
 		
 	 	</div>
-	   
+
+<!-- <label for="flip-a">Select slider:</label>
+<select name="slider" id="flip-a" data-role="slider">
+	<option value="off">Off</option>
+	<option value="on"><a href="#popupLogin" data-rel="popup" data-role="button" data-inline="true">Form</a></option>
+
+</select> -->
+
+
+
+
+
+
+<!-- <div data-role="popup" id="popupLogin" data-overlay-theme="b" data-theme="a" class="ui-corner-all">
+            <form>
+                <div style="padding:10px 20px;">
+                  <h3>Please sign in</h3>
+                  <label for="un" class="ui-hidden-accessible">Username:</label>
+                  <input type="text" name="user" id="un" value="" placeholder="username" data-theme="a" />
+
+                  <label for="pw" class="ui-hidden-accessible">Password:</label>
+                  <input type="password" name="pw" id="pass" value="" placeholder="password" data-theme="a" />
+
+                  <button type="submit" data-theme="b">Sign in</button>
+                </div>
+            </form>
+        </div> -->
+
+
+
 
 	   	<div data-role="footer" data-position="fixed" data-id="x" >
 	
 	<div data-role="navbar" >
 		<ul>
 			<li><a href="#news" data-icon="star" >End News</a></li>
-			<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-2/bronzeApp/index.html" data-icon="star">git</a></li>
+			<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-3/bronzeApp/index.html" data-icon="star">git</a></li>
 			<li><a href="#storage" data-icon="star" >Storage</a></li>
 			
 		</ul>
@@ -66,9 +96,10 @@ Apocalypse Checklist -->
 	    
 	</div>
 	</div>
-	<div data-role="page" id="zombie" data-add-back-btn="true">
+	<div data-role="page" id="zombie" data-add-back-btn="true" data-theme="a" >
 		<div data-role="header" data-role="fixed">
-			<h1>Zombie Plans</h1> 
+			<img src="images/header2.png" >
+			</a> 
 		</div>
 			<div class="content">
 				<p>Don't panic under construction. If an Zombie apocalypse has happened please consult your Bible until this page is operational. Mahalo and be well!</p>
@@ -87,20 +118,22 @@ Apocalypse Checklist -->
 					<ul>
 						<li><a href="#home" data-icon="star" >Home</a></li>
 						<li><a href="#news" data-icon="star">End News</a></li>
-						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-2/bronzeApp/index.html" data-icon="star">git</a></li>
+						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-3/bronzeApp/index.html" data-icon="star">git</a></li>
 					</ul>
 			</div>
 			</div>
 	</div>
-	<div data-role="page" id="natural" data-add-back-btn="true">
+	<div data-role="page" id="natural" data-add-back-btn="true" data-theme="a" >
 		<div data-role="header" data-role="fixed">
-			<h1>Natural Plans</h1> 
+			<img src="images/header2.png" >
+			</a> 
 		</div>
 			<div class="content-primary">
 				<p>Don't panic under construction. If an Natural apocalypse has happened please consult your Bible until this page is operational. Mahalo and be well!</p>
 			<div data-role="collapsible" data-collapsed="true" >
 		   		<img src="images/natural.png">
-		   		<h3>Natural</h3>
+		   		<img src="images/header2.png" >
+			</a>
 		   		<p>Could be asteroids, earthquakes, or just all volcanoes erupting at once.</p>
 		   	</div>
 			<div data-role="collapsible" data-collapsed="true" >
@@ -114,14 +147,15 @@ Apocalypse Checklist -->
 					<ul>
 						<li><a href="#home" data-icon="star" >Home</a></li>
 						<li><a href="#news" data-icon="star">End News</a></li>
-						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-2/bronzeApp/index.html" data-icon="star">git</a></li>
+						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-3/bronzeApp/index.html" data-icon="star">git</a></li>
 					</ul>
 			</div>
 			</div>
 	</div>
-	<div data-role="page" id="biblical" data-add-back-btn="true">
+	<div data-role="page" id="biblical" data-add-back-btn="true" data-theme="a" >
 		<div data-role="header" data-role="fixed">
-			<h1>Biblical Plans</h1> 
+			<img src="images/header2.png" >
+			</a> 
 		</div>
 			<div class="content">
 				<p>Don't panic under construction. If an Biblical apocalypse has happened please consult your Bible until this page is operational. Mahalo and be well!</p>
@@ -140,14 +174,15 @@ Apocalypse Checklist -->
 					<ul>
 						<li><a href="#home" data-icon="star" >Home</a></li>
 						<li><a href="#news" data-icon="star">End News</a></li>
-						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-2/bronzeApp/index.html" data-icon="star">git</a></li>
+						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-3/bronzeApp/index.html" data-icon="star">git</a></li>
 					</ul>
 			</div>
 			</div>
 	</div>
-	<div data-role="page" id="atomic" data-add-back-btn="true">
+	<div data-role="page" id="atomic" data-add-back-btn="true" data-theme="a" >
 		<div data-role="header" data-role="fixed">
-			<h1>Atomic Plans</h1> 
+			<img src="images/header2.png" >
+			</a>
 		</div>
 			<div class="content-primary">
 				<p>Don't panic under construction. If an Atomic apocalypse has happened please consult your Bible until this page is operational. Mahalo and be well!</p>
@@ -168,14 +203,15 @@ Apocalypse Checklist -->
 					<ul>
 						<li><a href="#home" data-icon="star" >Home</a></li>
 						<li><a href="#news" data-icon="star">End News</a></li>
-						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-2/bronzeApp/index.html" data-icon="star">git</a></li>
+						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-3/bronzeApp/index.html" data-icon="star">git</a></li>
 					</ul>
 			</div>
 			</div>
 	</div>
-	<div data-role="page" id="aliens" data-add-back-btn="true">
+	<div data-role="page" id="aliens" data-add-back-btn="true" data-theme="a" >
 		<div data-role="header" data-role="fixed">
-			<h1>Aliens Plans</h1> 
+			<img src="images/header2.png" >
+			</a> 
 		</div>
 			<div class="content-primary">
 				<p>Don't panic under construction. If an Alien apocalypse has happened please consult your Bible until this page is operational. Mahalo and be well!</p>
@@ -209,14 +245,15 @@ Apocalypse Checklist -->
 					<ul>
 						<li><a href="#home" data-icon="star" >Home</a></li>
 						<li><a href="#news" data-icon="star">End News</a></li>
-						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-2/bronzeApp/index.html" data-icon="star">git</a></li>
+						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-3/bronzeApp/index.html" data-icon="star">git</a></li>
 					</ul>
 			</div>
 			</div>
 	</div>
 	<div data-role="page" id="news" data-add-back-btn="true">
 		<div data-role="header" data-role="fixed">
-			<h1>Apocalyspe News</h1> 
+			<img src="images/header2.png" >
+			</a>
 		</div>
 			<div class="content-primary">
 		   			<ul>
@@ -352,7 +389,7 @@ Apocalypse Checklist -->
 					<ul>
 						<li><a href="#home" data-icon="star" >Home</a></li>
 						<li><a href="#storage" data-icon="star">Storage</a></li>
-						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-2/bronzeApp/index.html" data-icon="star">git</a></li>
+						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-3/bronzeApp/index.html" data-icon="star">git</a></li>
 					</ul>
 				</div>
 			</div>
@@ -362,7 +399,7 @@ Apocalypse Checklist -->
 	</div>
 	<div data-role="page" id="storage" data-add-back-btn="true">
 		<div data-role="header" data-role="fixed">
-			<h1>Checklist Storage</h1> 
+			<img src="images/header2.png" ></a> 
 		</div>
 			<div class="content-primary">
 				<p>Don't panic under construction. If an apocalypse has happened please consult your Bible until this page is operational. Mahalo and be well!</p>
@@ -372,7 +409,7 @@ Apocalypse Checklist -->
 					<ul>
 						<li><a href="#home" data-icon="star" >Home</a></li>
 						<li><a href="#news" data-icon="star">End News</a></li>
-						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-2/bronzeApp/index.html" data-icon="star">git</a></li>
+						<li><a href="http://johnplank211.github.com/mdv-projects/MiU/week-3/bronzeApp/index.html" data-icon="star">git</a></li>
 					</ul>
 			</div>
 			</div>
@@ -380,17 +417,24 @@ Apocalypse Checklist -->
 
 	
 
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+		<script type="text/javascript" src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
 		
+		<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+		<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+		<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+		
+		<script type="text/javascript" src="js/json.js"></script>
+		<script type="text/javascript" src="js/main2.js"></script>
 	    	
 	    
 
-		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 		
 		
 	</body>
 </html>
+
 
 
 		

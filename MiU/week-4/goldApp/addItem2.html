@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- John Plank
 Term 06/12
-MUI Project 3
+MUI Project 4
 Apocalypse Checklist -->
 <html lang="en">
 
@@ -47,76 +47,80 @@ Apocalypse Checklist -->
 <div data-role="page" id="addItem" data-add-back-btn="true">
 		
 		<div data-role="header" data-role="fixed">
-			<h1>Apocalyspe Checklist</h1> 
+			<!-- <h1>Apocalyspe Checklist</h1> --> 
+		<img src="images/header2.png" >
+			</a>
 		</div>
 
 		<div data-role="content">
 
-			<form action="#" method="post" id="checklistForm">
+			<form action="#" method="post" id="checklistForm" >
 
-				<div data-role="fieldcontain">
+
+
+				<div data-role="fieldcontain" >
 					<fieldset data-role="controlgroup" data-mini="true">
-						<legend>*Apocalypse</legend>
-							<br><small>* Must be filled out</small>
-						<input type="radio" value="Zombie" checked value="Zombie"name="apocalypse" id="apocalypse-1" class="required"/>
+						<legend><small>*Must be filled out</small></legend>
+							<br><h3>* Apocalypse</h3>
+						<input type="radio" value="Zombie" checked value="Zombie"name="apocalypse" id="apocalypse-1" data-theme="a" class="required"/>
 						<label for="apocalypse-1" >Zombie</label>
 
-						<input type="radio" value="Natural" name="apocalypse" id="apocalypse-2" />
+						<input type="radio" value="Natural" name="apocalypse" id="apocalypse-2" data-theme="a" />
 						<label for="apocalypse-2" >Natural</label>
 
-						<input type="radio" value="Nuclear" name="apocalypse" id="apocalypse-3" />
+						<input type="radio" value="Nuclear" name="apocalypse" id="apocalypse-3" data-theme="a" />
 						<label for="apocalypse-3" >Nuclear</label>
 
-						<input type="radio" value="Biblical" name="apocalypse" id="apocalypse-4" />
+						<input type="radio" value="Biblical" name="apocalypse" id="apocalypse-4" data-theme="a" />
 						<label for="apocalypse-4" >Biblical</label>
 
-						<input type="radio" value="Alien" name="apocalypse" id="apocalypse-5" />
+						<input type="radio" value="Alien" name="apocalypse" id="apocalypse-5" data-theme="a"/>
 						<label for="apocalypse-5" >Alien</label>
 					
 					</fieldset>
 
 				</div>
 
-				<div data-role="fieldcontain">
-					<fieldset data-role="controlgroup" data-mini="true">
-						<legend>Checklist Items</legend>
-						<input type="checkbox" value="Firearm" checked value="Firearm" name="firearm" id="firearm" />
+				<div data-role="fieldcontain"  >
+					<fieldset data-role="controlgroup" data-mini="true"  >
+						<h3>Checklist Items</h3>
+						<input type="checkbox" value="Firearm" checked value="Firearm" name="firearm" id="firearm" data-theme="a"/>
 						<label for="firearm" >Firearm</label>
 
-						<input type="checkbox" value="Ammo" checked value="Ammo" name="items" id="item-2" />
+						<input type="checkbox" value="Ammo" checked value="Ammo" name="items" id="item-2" data-theme="a"/>
 						<label for="item-2" >Ammo</label>
 
-						<input type="checkbox" value="Melee Weapon" name="item" id="item-3" />
+						<input type="checkbox" value="Melee Weapon" name="item" id="item-3" data-theme="a"/>
 						<label for="item-3" >Melee Weapon</label>
 
-						<input type="checkbox" value="P38" name="items" id="item-4" />
-						<label for="item-4" >P38</label>
+						<input type="checkbox" value="P38" name="items" id="item-4" data-theme="a"/>
+						<label for="item-4" data-theme="a">P38</label>
 
-						<input type="checkbox" value="Intestinal Fortitude" checked value="Intestinal Fortitude" name="item" id="item-5" />
+						<input type="checkbox" value="Intestinal Fortitude" checked value="Intestinal Fortitude" name="item" id="item-5" data-theme="a"/>
 						<label for="item-5" >Intestinal Fortitude</label>
 
-						<input type="checkbox" value="P38" name="items" id="item-6" />
+						<input type="checkbox" value="P38" name="items" id="item-6" data-theme="a"/>
 						<label for="item-6" >Canned Food</label>
 
-						<input type="checkbox" value="P38" name="items" id="item-7" />
+						<input type="checkbox" value="P38" name="items" id="item-7" data-theme="a"/>
 						<label for="item-7" >Leatherman</label>
 
-						<input type="checkbox" value="Topographical Map" name="item" id="item-8" />
+						<input type="checkbox" value="Topographical Map" name="item" id="item-8" data-theme="a" />
 						<label for="item-8" >Topographical Map</label>
 
-						<input type="checkbox" value="Rucksack" name="items" id="item-9" />
+						<input type="checkbox" value="Rucksack" name="items" id="item-9" data-theme="a" />
 						<label for="item-9" >Rucksack</label>
 
-						<input type="checkbox" value="Water" name="items" id="item-10" />
+						<input type="checkbox" value="Water" name="items" id="item-10" data-theme="a" />
 						<label for="item-10" >Water</label>
 
-						<input type="checkbox" value="Chain Mesh Suite" name="items" id="item-11" />
+						<input type="checkbox" value="Chain Mesh Suite" name="items" id="item-11" data-theme="a"/>
 						<label for="item-11" >Chain mesh suite</label>
 
-						<input type="checkbox" value="Boots" name="items" id="item-12" />
+						<input type="checkbox" value="Boots" name="items" id="item-12" data-theme="a"/>
 						<label for="item-12" >Boots</label>
 
-						<input type="checkbox" value="Matches" name="items" id="item-13" />
+						<input type="checkbox" value="Matches" name="items" id="item-13" data-theme="a"/>
 						<label for="item-13" >Matches</label>
 					
 					</fieldset>
@@ -127,29 +131,29 @@ Apocalypse Checklist -->
 					<label for="mydate">*Date The World Ended</label>
 
 					<input name="mydate" id="mydate" type="date" data-role="datebox"
-					   data-options='{"mode": "calbox"}' default value="12/21/2012" class="required date" >
+					   data-options='{"mode": "calbox"}' default value="12/21/2012" data-theme="a" class="required date" >
 				</div>
 		
 
 				<div data-role="fieldcontain">
 					<label for="readiness">Readiness:</label>
-					<input type="range" name="readiness" id="readiness" value="3" min="0" max="11"/>
+					<input type="range" name="readiness" id="readiness" value="3" min="0" max="11" data-theme="a"/>
 				</div>
 
 				
 				<div data-role="fieldcontain">
 					<label for="email">*Email Address:</label>
-					<input type="text" name="email" id="email" placeholder="notGonnamake@dead.com" class="required email" />
+					<input type="text" name="email" id="email" placeholder="notGonnamake@dead.com" class="required email" data-theme="a"/>
 				</div>
 
 				<div data-role="fieldcontain" >
 					<label for="comments">*Death Letter:</label>
-					<textarea placeholder="I tried my best but my best sucked!" class="required" ></textarea>
+					<textarea placeholder="I tried my best but my best sucked!" data-theme="a" class="required" ></textarea>
 				</div>
 
 				<div data-role="fieldcontain" >
 					<label for="fearGroups">Fear Level</label>
-					<select name="fearGroups" id="select" data-native-menu="false" >
+					<select name="fearGroups" id="select" data-native-menu="false" data-theme="a" >
 						<option data-placeholder=" true" >Please Choose Your Fear Level</option>
 						<option value="denial" >This can't be happening</option>
 						<option value="scared" >Oops I crapped my pants</option>
@@ -177,8 +181,8 @@ Apocalypse Checklist -->
 
 <!-- style="display:none;" -->
 				<div>
-					<input type="submit" value="Save my life" id="submit" data-theme="b" data-inline="true"/>
-					<input type="reset" value="Reset" data-theme="a" data-inline="true"/>
+					<input type="submit" value="Save my life" id="submit" data-theme="a" data-inline="true"/>
+					<input type="reset" value="Reset" data-theme="a" data-inline="true" />
 
 				</div>
 			

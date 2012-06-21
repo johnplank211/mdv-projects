@@ -1,9 +1,9 @@
 /*John Plank
 Term 06/12
-MUI Project 3
+MUI Project 4
 Apocalypse Checklist*/
 
-div.addItem {
+/*div.addItem*/ {
     top: 10px;
     left: 10px;
     color: white;
@@ -43,16 +43,26 @@ h4 { /*top: 25px;
     /*background-image: url("images/Zombie.png");*/
 }
 
-/*fieldset {
-	background: #b5b59f;
+fieldset {
+	background: #caab87;
     color: black;
-}*/
+}
 
 html {
-	background: #cccca3;
+	color: black;
+    background: #caab87;
    /* background-image: url("images/index.png");*/
-    color: white;
+   /* color: white;*/
 }
+
+div {
+    background: #caab87;
+}
+
+ul {
+    background: #caab87;
+}
+
 
 small {
 	font-style: italic;
@@ -70,12 +80,17 @@ h3 {
 	text-align: left;
     color: black;
     margin-bottom: 0px;
+    background: ;
 }
 
  li {
  
  	font-weight: bold;
  }
+
+body {
+    background: #caab87;
+}
 
  /*legend {
  	font-style: italic;
@@ -90,23 +105,19 @@ h3 {
     vertical-align:center;
 }
 
-input.addItem  {
+/*input.addItem  {
     padding-top: 20px;
     background-image: url("images/hourGlass.png");
-}
+}*/
 
-.addItem form {
-    height: 100px;
-}
-
-div {
+/*div.page {
     color: black;
 }
+*/
 
-/*div.icon*/ {
-    padding: 0px 0px 20px 0px;
-    top: 20px;
-}
+
+
+
 
 .img-1 {
     padding-top: 10px;
@@ -122,6 +133,7 @@ label.error {
 #errorLink {
     display: none;
 }
+
 
 
 
