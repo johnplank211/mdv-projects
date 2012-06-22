@@ -40,15 +40,23 @@ $(document).bind('pageinit', function(){
 
 });
 
+function ge(x){
+   var theElement = document.getElementById(x);
+   return theElement;              
+};
+
+var ge =$;
+var validate;
+
 /*window.addEventListener("DOMContentLoaded", function() {
 		var ge = function(x) {
 	    var theElement = document.getElementById(x);
 		return theElement;
 	};*/
-$('#myPopupDiv').popup();
+//$('#myPopupDiv').popup();
 
 
-var ge = $;
+//var ge = $;
 
 
 var toggleControls;
